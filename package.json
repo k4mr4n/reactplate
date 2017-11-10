@@ -11,12 +11,14 @@
     "dev": "cross-env NODE_ENV=development npm run start"
   },
   "dependencies": {
+    "apisauce": "^0.14.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.8",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "reduxsauce": "^0.7.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

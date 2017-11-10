@@ -4,10 +4,14 @@ import configureStore from './createStore'
 import rootSaga from '../sagas'
 import createHistory from 'history/createBrowserHistory'
 
+/* ------------- Reducers ------------- */
+import user from './user_reducer'
+
 export const history = createHistory()
 
 export const rootReducer = combineReducers({
-  routing: routerReducer
+  routing: routerReducer,
+  user
 })
 
 export default () => {
