@@ -6,7 +6,7 @@ export const INITIAL_STATE = []
 const setBanksAccounts = (state, { bankAccounts }) => ({ ...state, bankAccounts })
 
 export const reducer = createReducer(INITIAL_STATE, {
-  [Types.SET_BANK_ACCOUNTS]: setBanksAccounts
+  [Types.SET_BANKS_ACCOUNTS]: setBanksAccounts
 })
 
 export default reducer

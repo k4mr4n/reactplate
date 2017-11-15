@@ -1,11 +1,28 @@
 {
   "presets": [
     ["env", {
-      "targets": {
-        "chrome": "60"
-      }
+      "targets": { "node": 6 },
+      "useBuiltIns": true
     }],
-    ["react"]
+    "stage-0",
+    "react"
   ],
-  "plugins": ["react-hot-loader/babel"]
+  "plugins": ["add-module-exports", "dynamic-import-webpack"],
+  "env": {
+    "production": {
+      "presets": ["react-optimize"],
+      "plugins": ["babel-plugin-dev-expression"]
+    },
+    "development": {
+      "plugins": [
+        "transform-class-properties",
+        "transform-es2015-classes",
+        "react-hot-loader/babel",
+        ["flow-runtime", {
+          "assert": true,
+          "annotate": true
+        }]
+      ]
+    }
+  }
 }

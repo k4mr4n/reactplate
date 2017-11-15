@@ -1,12 +1,11 @@
 import { createActions } from 'reduxsauce'
 
 const { Types, Creators } = createActions({
-  setFirstName: ['firstName'],
-  setLastName: ['lastName'],
-  setEmail: ['email'],
+  setUser: ['user'],
   setBanksAccounts: ['bankAccounts'],
-  submit: null,
-  reset: null
+  submit: ['user'],
+  reset: null,
+  complete: null
 }, { prefix: 'USER_' })
 
 export const UserTypes = Types
